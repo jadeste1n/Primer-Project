@@ -131,7 +131,9 @@ nav {
     position: fixed;
     width: 100vw;
     top: 0px;
-    z-index: 2;
+    z-index: 4;
+    backdrop-filter: blur(50px);
+    background-color: rgba(249,250,247,0.1); 
 }
 
 .nav-wrapper {
@@ -199,13 +201,79 @@ nav button {
     /*height: calc(100vh - 60px);*/
     height: 100vh;
     min-height: 800px;
-    background-color: #DEDEE9 ;
     position: relative;
+    /*overflow: hidden;*/
 }
 
 .devider {
     width: 100%;
     border-bottom: 1px solid  #575953;
+}
+
+.bk-comp {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.one {
+    z-index: -1;
+    background-color: #DEDEE9;
+}
+
+.two {
+    z-index: 1;
+}
+
+.three {
+    z-index: -1;
+}
+
+.comp-e-1 {
+    top:0;
+    left:0;
+    position:absolute;
+}
+
+.comp-e-2 {
+    bottom: 0%;
+    right:0;
+    position:absolute;
+    margin-bottom:-40%;
+}
+
+.comp-e-3 {
+    top: 0;
+    position:absolute;
+    right: 50%;
+    transform: translateX(50%);
+}
+
+.comp-e-4 {
+    bottom: 0;
+    position:absolute;
+    right: 50%;
+    transform: translateX(50%);
+    margin-bottom:-25%;
+    opacity: 80%;
+}
+
+.two .comp-e-4{
+    margin-bottom:-35%;
+}
+
+.comp-e-5 {
+    top: 0;
+    position:absolute;
+    height: 100%;
+    width: 100%
+}
+
+.bk-blurr {
+    position:absolute;
+    backdrop-filter: blur(14px);
+    width: 100%;
+    height: 100%;
 }
 
 .header_text-wrapper {
@@ -262,7 +330,7 @@ nav button {
     display: block;
     position: absolute;
     bottom: -250%;
-    z-index: 2;
+    z-index: 3;
     left: 30%;
 }
 
@@ -271,7 +339,10 @@ nav button {
 /*PRODUCT-VID------------------------------------------------------------*/
 
 #product-video {
-    margin-top: 400px;
+    padding-top: 400px;
+    background-color: #F9FAF7;
+    z-index: 2;
+    position: relative;
 }
 
 .video-wrapper {
@@ -365,7 +436,7 @@ nav button {
     background-color: #F9FAF7;
 }
 
-.feature-screen{
+.feature-screen {
     grid-column: 1/13;
     display: grid;
     grid-template-columns: repeat(12,1fr);
@@ -373,10 +444,18 @@ nav button {
     align-content: center;
     height: auto;
     position: sticky;
-    top: 120px;
+    top: 60px;
     background-color: #F9FAF7;
+    padding-top: 80px;
 }
 
+.feature-screen .devider.absolute {
+    position: absolute;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+    border-bottom: 1px solid #F3F5ED;
+}
 
 .feature-text {
     grid-column: 1/5;
@@ -414,10 +493,6 @@ h2.label {
     margin-bottom: 32px;
 }
 
-#Features ul {
-    
-}
-
 #Features li {
     padding-bottom: 20px;
 }
@@ -445,13 +520,41 @@ h2.label {
 #benefits {
     margin-top: 200px;
     margin-bottom: 200px;
-    padding-top: 60px;
-    padding-bottom: 60px;
+    position:relative;
+}
+
+.bk-comp.four {
     background-color: #ACB8E3;
+    z-index:-2;
+}
+
+.five {
+    z-index:-1;
+}
+
+.comp-e-6 {
+    transform: rotate(0.5turn);
+    top: 0;
+    position: absolute;
+    width: 100%;
+}
+
+.comp-e-7 {
+    position: absolute;
+    bottom:0;
+    width: 100%;
+}
+
+.comp-e-8 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
 }
 
 #benefits .section-wrapper {
     grid-auto-rows: auto;
+    padding-top: 60px;
+    padding-bottom: 60px;
 }
 
 #benefits h2 {
@@ -558,6 +661,23 @@ h2.label {
 #Pricing {
     margin-top: 200px;
     margin-bottom: 200px;
+}
+
+.six {
+    z-index: -1;
+}
+
+.comp-e-9 {
+    position:absolute;
+    bottom: 0;
+    width: 100%
+}
+
+.comp-e-10 {
+    position:absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
 }
 
 
